@@ -1,6 +1,6 @@
-# Groww Portfolio App
+# Groww Dummy App
 
-Groww Portfolio App is a simple Flutter application that displays a portfolio of stocks. The app fetches data from a TypeScript backend connected to a PostgreSQL database.
+Groww Dummy App is a simple Flutter application that displays a portfolio of stocks. The app fetches data from a TypeScript backend connected to a PostgreSQL database.
 
 ## Features
 
@@ -11,7 +11,7 @@ Groww Portfolio App is a simple Flutter application that displays a portfolio of
 ## Tech Stack
 
 - **Frontend**: Flutter, Dart
-- **Backend**: TypeScript (without Node.js)
+- **Backend**: TypeScript 
 - **Database**: PostgreSQL
 
 ## Prerequisites
@@ -32,12 +32,15 @@ Before you begin, ensure you have the following installed:
    mkdir groww_backend
    cd groww_backend
 2. **Initialize a Node.js Project**:
+   ```sh
    npm init -y
 3. **Install TypeScript and Required Packages**:
+   ```sh
    npm install typescript ts-node @types/node express @types/express pg @types/pg
 4. Create a tsconfig.json File
 5. Create the Backend Server (index.ts)
 6. **Run the Backend Server**:
+   ```sh
    npx ts-node index.ts
    
 ### 2.  Set Up the Database
@@ -47,6 +50,7 @@ Before you begin, ensure you have the following installed:
 ### 3. Set Up the Frontend
 
 1. **Create a Flutter Project**:
+   ```sh
    flutter create groww_portfolio_app
    cd groww_portfolio_app
 2. Update the pubspec.yaml File
@@ -55,7 +59,9 @@ Before you begin, ensure you have the following installed:
 ### 4. Running the Application:
 
 1. **Start the Backend Server**:
+   ```sh
    npx ts-node index.ts
 2. **Run the Flutter App**:
+   ```sh
    flutter run
 
