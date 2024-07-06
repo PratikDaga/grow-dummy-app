@@ -64,4 +64,7 @@ Before you begin, ensure you have the following installed:
 2. **Run the Flutter App**:
    ```sh
    flutter run
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
