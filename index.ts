@@ -1,18 +1,21 @@
-import { Client } from 'pg';
 import express from 'express';
+import cors from 'cors';
+import { Client } from 'pg';
 
 const app = express();
 const port = 3000;
 
 const client = new Client({
-  user: 'your_username',
+  user: 'postgres',
   host: 'localhost',
   database: 'groww_portfolio',
-  password: 'your_password',
+  password: 'Pratik@21',
   port: 5432,
 });
 
 client.connect();
+
+app.use(cors()); // Enable CORS
 
 app.get('/portfolio', async (req, res) => {
   try {
