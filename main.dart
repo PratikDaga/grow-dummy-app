@@ -3,10 +3,12 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,7 +28,9 @@ class PortfolioScreen extends StatefulWidget {
 
 class _PortfolioScreenState extends State<PortfolioScreen> {
   Future<List<Portfolio>> fetchPortfolio() async {
-    final response = await http.get(Uri.parse('http://localhost:3000/portfolio'));
+    final response = await http.get(Uri.parse('http://10.0.2.2:3000/portfolio')); // For Android emulator
+    // final response = await http.get(Uri.parse('http://localhost:3000/portfolio')); // For iOS simulator
+    // final response = await http.get(Uri.parse('http://<your-machine-ip>:3000/portfolio')); // For physical device
 
     if (response.statusCode == 200) {
       List jsonResponse = json.decode(response.body);
